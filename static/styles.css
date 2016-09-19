@@ -1,0 +1,108 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 4rem 0 4rem 3rem;
+  padding: 0 1rem;
+  font-family: 'PT Serif', georgia, serif;
+  max-width: 32rem;
+  color: #666;
+}
+
+h1, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #222;
+  margin-bottom: 3rem;
+}
+
+p {
+  line-height: 1.66rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 0;
+  padding: 0;
+}
+
+ul li {
+  line-height: 3rem;
+  display: list-item;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+a:visited {
+  color: #ddd;
+}
+
+a:hover, a:active {
+  color: #f36f6f;
+}
+
+.nav {
+  margin-top: 5rem;
+  color: #ddd;
+}
+
+.nav .prev {
+  float: left;
+  width: 33.3333%;
+  text-align: left;
+  min-height: 1px;
+}
+
+.nav .next {
+  float: right;
+  width: 33.3333%;
+  text-align: right;
+}
+
+.nav .toc {
+  float: left;
+  width: 33.3333%;
+  text-align:center;
+}
+
+.nav:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+.links {
+  width: 20rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.links > span+span:before {
+  margin: 0 .5rem;
+  content: "/";
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
+}
+
+@media screen and (max-width: 40rem) {
+  body {
+    margin: 4rem auto 2rem;
+  }
+}
