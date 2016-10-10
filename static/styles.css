@@ -9,6 +9,11 @@ body {
   font-family: 'PT Serif', georgia, serif;
   max-width: 32rem;
   color: #666;
+  position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
 }
 
 h1, p, ul {
