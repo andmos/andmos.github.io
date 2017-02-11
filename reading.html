@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Readinglist</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <script>
+        var books =  $.getJSON( "http://app.amosti.net:1337/api/readingList", function (data){
+        var ul = $('<ul>').appendTo('body');
+        $.each(data, function(index, item) {
+          ul.append(
+            $(document.createElement('li')).text(String(item.title) + " - " + String(item.authors[0])));
+        });
+      });
+    </script>
+</body>
+</html>
