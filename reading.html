@@ -9,7 +9,7 @@
 </head>
 <body>
     <script>
-        var books =  $.getJSON( "http://app.amosti.net:1337/api/readingList", function (data){
+        var books =  $.getJSON( "https://app.amosti.net/reading/api/readingList", function (data){
         var ul = $('<ul>').appendTo('body');
         $.each(data, function(index, item) {
           ul.append(
