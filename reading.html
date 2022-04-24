@@ -5,18 +5,28 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
   <h3>Currently reading: </h3>
-    <script>
-        var books =  $.getJSON( "https://app.amosti.net/reading/api/readingList", function (data){
-        var ul = $('<ul>').appendTo('body');
+  <ul id="reading"></ul>
+  <script>
+      var books = $.getJSON("https://app.amosti.net/reading/api/readingList", function (data){
         $.each(data, function(index, item) {
-          ul.append(
+          $("#reading").append(
             $(document.createElement('li')).text(String(item.title) + " - " + String(item.authors[0])));
         });
-      });
-    </script>
+    });
+  </script>
+
+  <h3>Last read: </h3>
+  <ul id="read"></ul>
+  <script>
+    var books = $.getJSON("https://app.amosti.net/reading/api/donelist", function (data){
+      $("#read").append(
+        $(document.createElement('li')).text(String(data[0].title) + " - " + String(data[0].authors[0])));
+  });
+</script>
 </body>
 </html>
