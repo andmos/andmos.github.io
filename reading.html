@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
+  <h3>Currently reading: </h3>
     <script>
         var books =  $.getJSON( "https://app.amosti.net/reading/api/readingList", function (data){
         var ul = $('<ul>').appendTo('body');
