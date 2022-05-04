@@ -24,8 +24,10 @@
   <ul id="read"></ul>
   <script>
     var books = $.getJSON("https://app.amosti.net/reading/api/donelist", function (data){
-      $("#read").append(
-        $(document.createElement('li')).text(String(data[0].title) + " - " + String(data[0].authors[0])));
+      for (let i = 0; i < 2; i++) {
+        $("#read").append(
+          $(document.createElement('li')).text(String(data[i].title) + " - " + String(data[i].authors[0])));
+      }
   });
 </script>
 </body>
