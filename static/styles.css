@@ -103,8 +103,8 @@ a:hover, a:active {
   text-align: center;
 }
 
-.links > span+span:before {
-  margin: 0.5rem;
+.links > span:not(:last-child):after {
+  margin: 0 0.25rem 0 0.75rem;
   content: "/";
 }
 
@@ -115,6 +115,21 @@ a:hover, a:active {
 
 @media screen and (max-width: 40rem) {
   body {
-    margin: 4rem auto 2rem;
+    position: static;
+    transform: none;
+    margin: 2rem auto;
+    max-width: none;
+  }
+
+  .links, ul {
+    width: auto;
+  }
+
+  .links > span {
+    white-space: nowrap;
+  }
+
+  .logo {
+    width: 14rem;
   }
 }
